@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0px;
+    background: rgb(24, 24, 24);
+    }
+  
+  * {
+    margin:0px;
+    padding:0px;
+}
+
+header > img {
+  position: fixed;
+  margin-top: 3px;
+  margin-left: 20px;
+  width: 60px;
+}
+
+header {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: fixed;
+    float: right;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(0,0,0  ,1) 40%, rgba(0,212,255,0) 40%);
+}
+
+nav {
+    top: 4px;
+    position: absolute;
+    left:0;
+    right:0;
+	margin:20px auto;
+	max-width:1000px;
+	width:90%;
+  margin-top: 16px;
+  
+}
+
+.nav {
+	list-style:none;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+nav > ul {
+	display:table;
+	/*Quitamos el overflow hidden que estaba aqui*/
+	width:100%;
+	background:#000;
+	position:relative;
+}
+
+nav > ul li {
+	display:table-cell;
+}
+
+/*Sub-menu*/
+nav > ul > li:hover > ul {
+	display:block;
+	height:100%;
+}
+
+nav > ul > li > ul {
+  background-color: #ff7979;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+nav > ul > li > ul {
+	display:block;
+	position:absolute;
+	background:#fff;
+	left:0;
+	right:0;
+	overflow:hidden;
+	height:0%;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+nav > ul li a {
+	color:#fff;
+	display:block;
+	line-height:20px;
+	padding:20px;
+	position: relative;
+	text-align:center;
+	text-decoration:none;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+nav > ul > li > ul > li {
+  background-color: #ff7979;
+  float: left;
+  width: 33.3333333333333333333333333333333333%;
+}
+
+nav > ul > li > ul > li a:hover {
+	background:#ca6060;
+}
+
+
+nav > ul > li:hover {
+	background:#ff7979;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+nav > ul > li > a span {
+	background:#174459;
+	display:block;
+	height:100%;
+	width:100%;
+	left:0;
+	position:absolute;
+	top:-55px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+nav > ul > li > a span .icon {
+	display:block;
+	line-height:60px;
+}
+
+nav > ul > li > a:hover > span {
+	top:0;
+}
+
+/*Colores*/
+nav ul li a .primero {
+	background:#0e5061;
+}
+
+nav ul li a .segundo {
+	background:#5da5a2;
+}
+
+nav ul li a .tercero {
+	background:#3500D3;
+}
+
+nav ul li a .cuarto {
+	background:#174459;
+}
+
+nav ul li a .quinto {
+	background:#37a4d9;
+}
+
+  
+div > h1 {
+  text-indent: 6px;
+  font-size: 25px;
+  font-weight: 500px;
+  margin: 0;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+  
+  article {
+  width: 100%;
+  height: calc(100vh - 140px);
+    padding-top: 100px;
+    float: left;
+    color: azure;
+    text-align: center;
+
+  }
+  .float-section {
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: black;
+    color: white;
+  }
+
+  
+
+  .float-section::after {
+    content: "";
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 8px 8px 0px 7px rgba(252,121,121,1);
+  border-radius: 20px;
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .float-section:hover {
+    -webkit-transform: scale(1.03, 1.03);
+    transform: scale(1.03, 1.03);
+  }
+  
+  .float-section:hover::after {
+      opacity: 1;
+  }
+  
+  .float-section h1 {
+    text-align: center;
+    border-bottom: solid black 2px;
+    border-radius: 4%;
+  }
+  
+  
+  .float-section p {
+    margin: 1% 5% 3% 5%;
+  }
+  
+  .float-section h2 {
+    margin: 2% 2% 1% 2%;
+  }
+  
+  a:link, a:visited, a:active {
+    text-decoration:none;
+}
+  /*
+  #333333
+  #ff7979
